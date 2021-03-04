@@ -97,12 +97,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  /* background-color: var(--color-pink); */
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -150,6 +159,7 @@ p {
   background: url("../imgs/homebackground-200515-154505.png") no-repeat
     center/cover;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
