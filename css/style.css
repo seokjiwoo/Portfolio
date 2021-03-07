@@ -534,8 +534,8 @@ p {
 
   .navbar__toggle-btn {
     display: block;
-    top: 16px;
-    right: 8px;
+    top: 20px;
+    right: 16px;
     font-size: var(--font-medium);
   }
 
