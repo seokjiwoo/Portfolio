@@ -64,6 +64,9 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
 }
 
 /*  Typograhy */
