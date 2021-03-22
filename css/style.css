@@ -108,14 +108,14 @@ p {
   background-color: transparent;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 0 16px;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-light-violet);
-  padding: 8px;
+  padding: 0 8px;
   opacity: 0.9;
 }
 
@@ -201,6 +201,19 @@ p {
 }
 
 /* About */
+.sa {
+  opacity: 0;
+  transition: all .5s ease;
+}
+.sa-up {
+  transform: translate(0, 100px);
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -242,6 +255,10 @@ p {
   align-items: center;
 }
 
+.job .job__logo{
+  width: 80px;
+}
+
 .jab__description {
   margin: 0 16px;
   text-align: left;
@@ -261,7 +278,7 @@ p {
 }
 
 /* Skill */
-#skill {
+#skills {
   background-color: var(--color-yellow);
 }
 
@@ -537,11 +554,12 @@ p {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-light-violet);
-  }
-
-  #navbar.navbar--dark {
     padding: 16px;
   }
+
+  /* #navbar.navbar--dark {
+    padding: 16px;
+  } */
 
   .navbar__menu {
     flex-direction: column;

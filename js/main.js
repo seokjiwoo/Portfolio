@@ -94,7 +94,7 @@ const sectionIds = [
   '#about' , 
   '#skills' , 
   '#work' , 
-  '#testimonials' , 
+  // '#testimonials' , 
   '#contact' ,
 ];
 const sections = sectionIds.map( id => document.querySelector( id ) );
@@ -145,3 +145,27 @@ window.addEventListener('wheel' , () => {
   }
   selectNavItem( navItems[selectedNavIndex] );
 })
+
+const saDefaultMargin = 200;
+let saTriggerMargin = 0;
+let saTriggerHeight = 0;
+const saElementList = document.querySelectorAll('.sa');
+
+const saFunc = () =>{
+  for( const element of saElementList ){
+    if(!element.classList.contains('show')){
+     saTriggerMargin = saDefaultMargin;
+    }
+    saTriggerHeight = element.getBoundingClientRect().top + saTriggerMargin;
+
+    if(window.innerHeight > saTriggerHeight) {
+      let delay = element.dataset.saDelay ? element.dataset.saDelay : 0;
+      setTimeout(() => {
+          element.classList.add('show');
+      }, delay);
+    }
+  }
+}
+
+window.addEventListener( 'load' , saFunc );
+window.addEventListener( 'scroll' , saFunc );
