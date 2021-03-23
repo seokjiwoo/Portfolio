@@ -15,7 +15,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-balck: #000000;
-  --color-light-violet: #7986cb;
+  --color-light-violet: #81d4fa;
 
   /* Font size */
   --font-large: 48px;
@@ -114,9 +114,8 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-light-violet);
+  background-color: rgba(129 , 212, 250, 0.8);
   padding: 0 8px;
-  opacity: 0.9;
 }
 
 .navbar__menu {
@@ -124,8 +123,14 @@ p {
 }
 
 .navbar__logo {
-  font-size: var(--font-medium);
+  display: flex;
+  align-items: center;
+  font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
+}
+
+.navbar__logo > a {
+  padding-left: 10px;
 }
 
 .navbar__menu__item {
@@ -156,7 +161,7 @@ p {
 
 /* Home */
 #home {
-  background: url("../imgs/home__bg_1.png") no-repeat center/cover;
+  background: url("../imgs/aurora-borealis-1839582_1920.jpg") no-repeat center/cover;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -557,9 +562,9 @@ p {
     padding: 16px;
   }
 
-  /* #navbar.navbar--dark {
+  #navbar.navbar--dark {
     padding: 16px;
-  } */
+  }
 
   .navbar__menu {
     flex-direction: column;
