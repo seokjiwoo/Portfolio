@@ -87,8 +87,8 @@
 
 /* body4 */
 #body4 .product_bg{
-  background:url(../20210331_br_Dessert14998/m_bg_07_01.jpg) no-repeat top center;
-  /* background-attachment: fixed; */
+  background:url(../20210331_br_Dessert14998/m_bg_07_01.jpg) no-repeat center top;
+  background-size: cover;
 }
 #body4 .link1{ left: 3.4rem; top: 3.9rem; width: 3.2rem; height: 5rem; }
 #body4 .link2{left: 0.3rem; top: 9rem;width: 6.4rem; height: 3.0rem; }
