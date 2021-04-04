@@ -1,0 +1,83 @@
+@charset 'utf-8';
+
+area { outline:none; }
+link, iframe, img { border:0;width:auto; }
+.local_wrap { position:relative;overflow:hidden;width:100%;min-width:1140px; }
+.local_wrap a { outline:0; }
+.content_wrap { position:relative;width:1140px;margin:0 auto;font-size:0;text-align:center; } 
+.content_tit{position:absolute;}
+#w_visual{ background:url(http://cdn.boribori.co.kr/Images_Web/2021/20210303_br_Dessert9891/w/bg_visual.jpg) no-repeat center 0; }
+[class*='swiper-button-prev'], [class*='swiper-button-next']{ position:absolute;display:inline-block;width:60px;height:60px;z-index:9;cursor:pointer; }
+
+#body1{height:1210px;background:url(../20210331_br_Dessert14998/bg_visual.jpg) no-repeat 50% 0;}
+#body1 .content_wrap{ text-align: left;}
+#body1 .main_txt{position: absolute; z-index: 100; transition: all .5s ease;display: inline-block;opacity: 0;transform: translate(60px, 250px);}
+#body1 .main_txt.ani_top{transform: translate(60px , 0);opacity:1;}
+#body1 .main_slider{width: 1140px; height: 662px;} 
+#body1 .main_slider li.swiper-slide{height: 662px; opacity:0 !important;}
+#body1 .main_slider li.swiper-slide-active{opacity:1 !important;}
+
+#body2 {background-color: #fcedd8;}
+#body2 .sa {opacity: 0;transition: all .5s ease;}
+#body2 .sa-up {transform: translate(0, 100px);}
+#body2 .sa.show {opacity: 1; transform: none;}
+#body2 .section1{height:883px;background: url(../20210331_br_Dessert14998/bg_01.jpg) no-repeat 50% 0;}
+#body2 .section2{height:727px;background: url(../20210331_br_Dessert14998/bg_02.jpg) no-repeat 50% 0;}
+#body2 .section3{height:831px;background: url(../20210331_br_Dessert14998/bg_03.jpg) no-repeat 50% 0;}
+#body2 .section1 ,
+#body2 .section2,
+#body2 .section3{content: "";display:block;clear: both;}
+#body2 .section1 .w_01_01,
+#body2 .section1 .w_01_02,
+#body2 .section2 .w_02_01,
+#body2 .section2 .w_02_02,
+#body2 .section3 .w_03_01,
+#body2 .section3 .w_03_02{display: inline-block; vertical-align: top;}
+#body2 .section1 .w_01_01{margin: 262px 0 0 36px;}
+#body2 .section1 .w_01_02{margin: 360px 0 0 39px;}
+#body2 .section1 .w_01_memo{float:right; margin-top:262px;}
+#body2 .section2 .w_02_01{margin: 130px 0 0 161px;}
+#body2 .section2 .w_02_02{margin: 224px 0 0 30px;}
+#body2 .section2 .w_02_memo{float:left; margin-top:110px;}
+#body2 .section3 .w_03_01{margin: 140px 0 0 36px;}
+#body2 .section3 .w_03_02{margin: 202px 0 0 39px;}
+#body2 .section3 .w_03_memo{float:right; margin-top:112px;}
+
+#body3{height:902px; background:#fde8d7 url(../20210331_br_Dessert14998/bg_04.jpg) no-repeat 50% 0;}
+#body3 .inner{width: 1140px; margin: 0 auto;}
+#body3 .question_wrap{position:relative; width: 655px; height:623px; margin:0 auto; padding-top:154px;}
+#body3 .question_wrap .image_box{position: relative;}
+#body3 .question_wrap .btns_wrap{position: absolute; bottom:96px; width:100%; text-align: center;}
+#body3 .question_wrap .btns_wrap .btn{width: 156px; height: 70px; display:inline-block; overflow: hidden; background:url(../20210331_br_Dessert14998/w_answer_btn.png) no-repeat 0 0;cursor: pointer;}
+#body3 .question_wrap .btns_wrap .btn:first-child{margin-right: 140px;}
+#body3 .question_wrap .btns_wrap .btn.yes{background-position: 0 0;}
+#body3 .question_wrap .btns_wrap .btn.no{background-position: -160px 0;}
+#body3 .question_wrap .btns_wrap .btn.yes:hover,
+#body3 .question_wrap .btns_wrap .btn.no:hover{background-position-y: -76px;}
+#body3 .question_wrap .popup{position:absolute; left:0; top:154px; display: none; z-index: 100;}
+#body3 .question_wrap .popup button{position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); width: 209px; height: 47px; background:url(../20210331_br_Dessert14998/btn_test_begin.png) no-repeat 0 0; font-size: 0;}
+
+#body4 .links,
+#body5 .links,
+#body6 .links{width: 1140px; margin:0 auto; /*background-color: gray; opacity: 0.8;*/}
+#body4 .links [class^="link"],
+#body5 .links [class^="link"],
+#body6 .links [class^="link"]{display:block; /*background-color: red;*/}
+
+#body4 .product_bg{position:relative; height: 1217px; background:url(../20210331_br_Dessert14998/w_pc_07_01.jpg) no-repeat top center; background-attachment: fixed;}
+#body4 .product_bg .inner_bg{height: 1217px;background:url(../20210331_br_Dessert14998/w_pc_07_01.png) no-repeat top center;}
+#body4 .product_bg .inner_bg .links{height: 1227px;}
+#body4 .product_bg .inner_bg .links .link1{width: 888px; height: 440px; transform: translate(98px, 290px);}
+#body4 .product_bg .inner_bg .links .link2{width: 888px; height: 380px; transform: translate(98px, 292px);}
+
+#body5 .product_bg{position:relative; height: 1115px; background:url(../20210331_br_Dessert14998/w_pc_07_02.jpg) no-repeat top center; background-attachment: fixed;}
+#body5 .product_bg .inner_bg{height: 1115px;background:url(../20210331_br_Dessert14998/w_pc_07_02.png) no-repeat top center;}
+#body5 .product_bg .inner_bg .links{height: 1115px;}
+#body5 .product_bg .inner_bg .links .link1{width: 878px; height: 460px; transform: translate(168px, 60px);}
+#body5 .product_bg .inner_bg .links .link2{width: 878px; height: 470px; transform: translate(168px, 130px);}
+
+#body6 .product_bg{position:relative; height: 1064px; background:url(../20210331_br_Dessert14998/w_pc_07_03.jpg) no-repeat top center; background-attachment: fixed;}
+#body6 .product_bg .inner_bg{height: 1064px;background:url(../20210331_br_Dessert14998/w_pc_07_03.png) no-repeat top center;}
+#body6 .product_bg .inner_bg .links{height: 1064px;}
+#body6 .product_bg .inner_bg .links .link1{width: 888px; height: 460px; transform: translate(98px, 160px);}
+#body6 .product_bg .inner_bg .links .link2{width: 888px; height: 430px; transform: translate(98px, 162px);}
