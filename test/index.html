@@ -5,14 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <title>보리보리</title>
-   <link href="http://static-l.halfclub.com/cdn_bm/components/assets/css/default.css" type="text/css" media="all" rel="stylesheet">
-   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_bm/components/assets/js/jquery-3.3.1.min.js"></script><!-- // v3.3.1 -->
-   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_bm/components/assets/js/common_maria.js"></script>
-   <!-- <script type="text/javascript" src="http://maria.trcc.tk/hf/mc/assets/js/common.js"></script> -->
-   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_bm/components/assets/js/swiper.min.js"></script><!-- // v4.4.6 -->
-   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_bm/components/assets/js/ixBand.min.js"></script><!-- // v1.2.2 -->
-   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_bm/components/assets/js/ixSnack.min.js"></script><!-- // v0.6.2 -->
-   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_bm/components/assets/js/pinch-zoom.umd.js"></script> 
+   
 </head>
 <body>	
    <!-- Event CSS & JS -->
@@ -21,7 +14,7 @@
 	<!-- // Event CSS & JS -->
 
 	<div class="local_wrap bg_wrap">
-      <div id="body1">
+      <!-- <div id="body1">
          <div class="main_txt"><img src="./20210331_br_Dessert14998/m_visual_txt.png" alt="" /></div>
          <div class="swiper_wrap">
             <div class="swiper-container">
@@ -82,7 +75,7 @@
             <div class="popup"><img src="./20210331_br_Dessert14998/r_04.jpg" alt=""><button>테스트다시하기</button></div>
          </div>
          <img src="./20210331_br_Dessert14998/m_04.jpg"  alt="">
-      </div>
+      </div> -->
       <div id="body4">
          <div class="product_bg">
             <a href="http://www.boribori.co.kr/product/292031710" class="link1"></a>
@@ -106,130 +99,137 @@
       </div>
 	</div><!-- // local_wrap --> 
    <script>
-      $(function(){         
-			var swipes = [];
-			function tc_slide(){
-				$('.swiper-container').each(function(i, obj){  
-					if (swipes[i] != null) {
-						swipes[i].destroy(false, true)
-					}
-					if(i===0){
-						swipes[i] = new Swiper(obj,{  
-							navigation: {
-								nextEl: '.swiper-button-next'+i,
-								prevEl: '.swiper-button-prev'+i,
-							},
-							autoplay: {
-								delay:3000,
-								disableOnInteraction:true,
-							}, 
-                     effect:'fade',
-							loop:false,
-							speed:800,
-							slidesPerView:1,							   
-							observer:true,
-							observeParents:true,
-							observeSlideChildren:true
-						}); 
-					} 
-					else { 
-						swipes[i] = new Swiper(obj,{  
-							navigation: {
-							  nextEl: '.swiper-button-next'+i,
-							  prevEl: '.swiper-button-prev'+i,
-							},
-							autoplay: {
-							  //delay:3000,
-							  disableOnInteraction:true,
-							}, 
-                     effect:'fade',
-							loop:true,
-							speed:800,
-							slidesPerView:1,
-							/*centeredSlides:centerslide,  */                   
-							observer:true,
-							observeParents:true,
-							observeSlideChildren:true
-						});
-					}	
-				});
-			}
-			tc_slide();	
+      var product_bg = document.querySelector('#body4 .product_bg');
+      var html = document.querySelector('html');
+      window.addEventListener('scroll', function(e){
+         var sct = html.scrollTop;
+         console.log(sct, product_bg);
+         product_bg.style.backgroundPosition = `center ${sct}px`;
+      });
+      // $(function(){         
+		// 	var swipes = [];
+		// 	function tc_slide(){
+		// 		$('.swiper-container').each(function(i, obj){  
+		// 			if (swipes[i] != null) {
+		// 				swipes[i].destroy(false, true)
+		// 			}
+		// 			if(i===0){
+		// 				swipes[i] = new Swiper(obj,{  
+		// 					navigation: {
+		// 						nextEl: '.swiper-button-next'+i,
+		// 						prevEl: '.swiper-button-prev'+i,
+		// 					},
+		// 					autoplay: {
+		// 						delay:3000,
+		// 						disableOnInteraction:true,
+		// 					}, 
+      //                effect:'fade',
+		// 					loop:false,
+		// 					speed:800,
+		// 					slidesPerView:1,							   
+		// 					observer:true,
+		// 					observeParents:true,
+		// 					observeSlideChildren:true
+		// 				}); 
+		// 			} 
+		// 			else { 
+		// 				swipes[i] = new Swiper(obj,{  
+		// 					navigation: {
+		// 					  nextEl: '.swiper-button-next'+i,
+		// 					  prevEl: '.swiper-button-prev'+i,
+		// 					},
+		// 					autoplay: {
+		// 					  //delay:3000,
+		// 					  disableOnInteraction:true,
+		// 					}, 
+      //                effect:'fade',
+		// 					loop:true,
+		// 					speed:800,
+		// 					slidesPerView:1,
+		// 					/*centeredSlides:centerslide,  */                   
+		// 					observer:true,
+		// 					observeParents:true,
+		// 					observeSlideChildren:true
+		// 				});
+		// 			}	
+		// 		});
+		// 	}
+		// 	tc_slide();	
 
-         var mainText = document.querySelector('.main_txt');
-         setTimeout(function(){
-            mainText.classList.add('ani_top');
-         }, 500);
+      //    var mainText = document.querySelector('.main_txt');
+      //    setTimeout(function(){
+      //       mainText.classList.add('ani_top');
+      //    }, 500);
 
-         function scrollAnimation() {
-            var saDefaultMargin = 200,
-                saTriggerMargin = 0,
-                saTriggerHeight = 0,
-                saElementList = document.querySelectorAll('.sa');
-            var saFunc = function(){
-               [].forEach.call(saElementList , function(element , idx){
-                  if(!element.classList.contains('show')){
-                     saTriggerMargin = saDefaultMargin;
-                  }
-                  saTriggerHeight = element.getBoundingClientRect().top + saTriggerMargin;
-                  if(window.innerHeight > saTriggerHeight){
-                     var delay = element.dataset.saDelay ? element.dataset.saDelay : 0;
-                     setTimeout(function(){
-                        element.classList.add('show');
-                     })
-                  }
-               })
-            }
-            window.addEventListener( 'scroll' , saFunc );
-         };
+      //    function scrollAnimation() {
+      //       var saDefaultMargin = 200,
+      //           saTriggerMargin = 0,
+      //           saTriggerHeight = 0,
+      //           saElementList = document.querySelectorAll('.sa');
+      //       var saFunc = function(){
+      //          [].forEach.call(saElementList , function(element , idx){
+      //             if(!element.classList.contains('show')){
+      //                saTriggerMargin = saDefaultMargin;
+      //             }
+      //             saTriggerHeight = element.getBoundingClientRect().top + saTriggerMargin;
+      //             if(window.innerHeight > saTriggerHeight){
+      //                var delay = element.dataset.saDelay ? element.dataset.saDelay : 0;
+      //                setTimeout(function(){
+      //                   element.classList.add('show');
+      //                })
+      //             }
+      //          })
+      //       }
+      //       window.addEventListener( 'scroll' , saFunc );
+      //    };
          
-         scrollAnimation();
-      });
+      //    scrollAnimation();
+      // });
 
-      $(document).ready(function(){
-         var yes_length =1,
-         no_length=0;
+      // $(document).ready(function(){
+      //    var yes_length =1,
+      //    no_length=0;
 
-         $('.btns_wrap button').on('click',function(){
-            var qustion = $('.btns_wrap button').index(this);
-            if(qustion==0){
-               yes_length++;
-               if(no_length==1 && yes_length > 6){
-                  $('.popup').eq(1).show();
-                  yes_length=1;
-                  no_length=0;
-                  return;
-               }
-               if(yes_length==8){
-                  $('.popup').eq(2).show();
-                  yes_length=0;
-                  return;
-               }
-               $('.image_box p img').attr('src' , './20210331_br_Dessert14998/q_0'+yes_length+'.jpg' );
-            }else if(qustion==1 && yes_length==6){
-               yes_length++;
-               no_length++;
-               console.log(yes_length)
-               // $('.content p').html('7-2이미지'+yes_length);	
-               $('.image_box p img').attr('src' ,'./20210331_br_Dessert14998/q_07_02.jpg' );
+      //    $('.btns_wrap button').on('click',function(){
+      //       var qustion = $('.btns_wrap button').index(this);
+      //       if(qustion==0){
+      //          yes_length++;
+      //          if(no_length==1 && yes_length > 6){
+      //             $('.popup').eq(1).show();
+      //             yes_length=1;
+      //             no_length=0;
+      //             return;
+      //          }
+      //          if(yes_length==8){
+      //             $('.popup').eq(2).show();
+      //             yes_length=0;
+      //             return;
+      //          }
+      //          $('.image_box p img').attr('src' , './20210331_br_Dessert14998/q_0'+yes_length+'.jpg' );
+      //       }else if(qustion==1 && yes_length==6){
+      //          yes_length++;
+      //          no_length++;
+      //          console.log(yes_length)
+      //          // $('.content p').html('7-2이미지'+yes_length);	
+      //          $('.image_box p img').attr('src' ,'./20210331_br_Dessert14998/q_07_02.jpg' );
                
-            }else if(qustion==1 && yes_length==7){
-               $('.popup').eq(0).show();
-               yes_length=1;
-               no_length=0;			
-            }else{
-               $('.popup').eq(3).show();
-               yes_length=0;
-            }
-         })
-      });
+      //       }else if(qustion==1 && yes_length==7){
+      //          $('.popup').eq(0).show();
+      //          yes_length=1;
+      //          no_length=0;			
+      //       }else{
+      //          $('.popup').eq(3).show();
+      //          yes_length=0;
+      //       }
+      //    })
+      // });
 
-      $('.popup button').on('click' , function(){
-         yes_length = 1;
-         no_length=0;
-         $('.popup').hide();
-         $('.image_box p img').attr('src' , './20210331_br_Dessert14998/q_0'+yes_length+'.jpg' );
-      });
+      // $('.popup button').on('click' , function(){
+      //    yes_length = 1;
+      //    no_length=0;
+      //    $('.popup').hide();
+      //    $('.image_box p img').attr('src' , './20210331_br_Dessert14998/q_0'+yes_length+'.jpg' );
+      // });
    </script>
 </body>
 </html>
